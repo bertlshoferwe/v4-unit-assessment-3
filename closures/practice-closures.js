@@ -9,12 +9,21 @@
   */
   
   //CODE HERE
+function myFunc() {
+  let myStr = 'super secret string';
 
+  function getSecretString() {
+
+    return this.myStr
+
+  }
+}
   
   //Now create a variable called secretString. Its value should be the invocation of myFunc.
 
   //CODE HERE
   
+  const secretString = myFunc()
   
   ////////////PROBLEM 2////////////
 
@@ -29,28 +38,35 @@
   */
   
   //CODE HERE
+function lightSwitch() {
+  let isTheLightOn = false
 
+  function flipTheSwitch() {
+    ( isTheLightOn )? 'The light is on' : 'The light is off'
+  }
+}
   
   //Create a variable called kitchenSwitch whose value is the invocation of lightSwitch.
   
   //CODE HERE
-
+const kitchenSwitch = lightSwitch()
   
   //Invoke kitchenSwitch.
 
   //CODE HERE
   
-  
+  kitchenSwitch
   //Create a variable called bathroomSwitch whose value is the invocation of lightSwitch. 
 
   //CODE HERE
   
-  
+  const bathroomSwitch = lightSwitch()
   //Invoke bathroomSwitch twice.
   
   //CODE HERE
 
-  
+  bathroomSwitch
+  bathroomSwitch
   
   ////////////PROBLEM 3////////////
 
@@ -79,18 +95,37 @@
   */
 
   //CODE HERE
+function inventory() {
+  let products = [];
 
+  let readProduct = products
+
+  function addToProducts(product) {
+    products.push(product)
+  }
+
+  function deleteFromProducts(product) {
+   const indexOfProduct = products.indexOf(product)
+
+   products.splice(indexOfProduct)
+
+
+  }
+
+  return readProduct
+}
 
   /*
     Create a variable called 'shoes' whose value is the invocation of inventory.
   */
 
   //CODE HERE
-
+const shoes = inventory()
 
   /*
     Add an item to your shoes array using the addToProducts function
   */
+ console.log(shoes)
 
   //CODE HERE
-
+// shoes.addToProducts('Jordans')
