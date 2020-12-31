@@ -2,35 +2,35 @@ import React, { Component } from 'react';
 import '../App.css';
 
 class CartList extends Component {
-    constructor() {
-        super();
-    }
+  constructor() {
+    super();
+  }
 
-    render() {
+  render() {
 
-const { data } = this.props
-
-
-let cart = data.map( ( data ) => 
-
-        <div key={ data.id } >
-            <p className='coverTitle '>{ data.title }</p>
-        </div>
-
-)
+    const { data } = this.props;
 
 
+    let cart = data.map( ( data ) => 
 
-return (
-            <div className='cartList' >
-                { cart }
+      <div key={ data.id } >
+        <p className='coverTitle '>{ data.title }</p>
+      </div>
 
-            </div>
-        );
-    }
+    );
+
+
+
+    return (
+      <div className='cartList' >
+        { cart }
+
+      </div>
+    );
+  }
 }
 
 
 
-export default CartList
+export default CartList;
 
